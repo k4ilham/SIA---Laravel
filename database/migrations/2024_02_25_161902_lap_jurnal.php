@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         DB::unprepared('
-            CREATE VIEW lap_jurnal AS SELECT akun.nm_akun AS nm_akun, jurnal.tgl_jurnal AS tgl, sum(jurnal.debet) AS debet, sum(jurnal.kredit) AS kredit FROM (akun join jurnal) WHERE akun.no_akun = jurnal.no_akun GROUP BY jurnal.no_jurnal ;
+            CREATE OR REPLACE  VIEW lap_jurnal AS SELECT akun.nm_akun AS nm_akun, jurnal.tgl_jurnal AS tgl, sum(jurnal.debet) AS debet, sum(jurnal.kredit) AS kredit FROM (akun join jurnal) WHERE akun.no_akun = jurnal.no_akun GROUP BY jurnal.no_jurnal ;
         ');
     }
 

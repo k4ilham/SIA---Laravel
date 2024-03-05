@@ -56,12 +56,14 @@
         </div>
 
         <!-- Nav Item - Profile -->
+        @role('admin')
         <li class="nav-item ">
             <a class="nav-link" href="#">
                 <i class="fas fa-fw fa-user"></i>
                 <span>{{ __('Profile') }}</span>
             </a>
         </li>
+        @endrole
 
         <!-- Nav Item - About -->
         <li class="nav-item ">
