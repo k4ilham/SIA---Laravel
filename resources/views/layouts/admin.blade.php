@@ -19,6 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('asset/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('asset/css/datatable.css') }}" rel="stylesheet">
+
     <!-- Favicon -->
     <link href="{{ asset('asset/img/favicon.png') }}" rel="icon" type="image/png">
 </head>
@@ -91,6 +93,17 @@
 <script src="{{ asset('asset/vendor/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('asset/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('asset/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+<script src="{{ asset('asset/js/datatable.js') }}"></script>
 <script src="{{ asset('asset/js/sb-admin-2.min.js') }}"></script>
+
+<script>
+    $("#dataTable").dataTable({
+        "columnDefs": [
+            { "sortable": false, "targets": [0] }
+        ],
+        "lengthMenu": [[-1,5, 10, 25, 50, -1], ["All",5, 10, 25, 50, "All"]],
+    });
+</script>
+
 </body>
 </html>

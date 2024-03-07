@@ -23,26 +23,20 @@
 
 <!-- Heading -->
 <div class="sidebar-heading">
-    {{ __('Settings') }}
+    {{ __('Master Data') }}
 </div>
 
 <!-- Nav Item - Profile -->
 @role('admin')
 <li class="nav-item ">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{{ route('user.index') }}">
         <i class="fas fa-fw fa-user"></i>
-        <span>{{ __('Profile') }}</span>
+        <span>{{ __('Master User') }}</span>
     </a>
 </li>
 @endrole
 
-<!-- Nav Item - About -->
-<li class="nav-item ">
-    <a class="nav-link" href="#">
-        <i class="fas fa-fw fa-hands-helping"></i>
-        <span>{{ __('About') }}</span>
-    </a>
-</li>
+
 
 <!-- Divider -->
 <hr class="sidebar-divider d-none d-md-block">
